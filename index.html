@@ -9,7 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #2c3e50, #3498db);
+            background: url('https://www.transparenttextures.com/patterns/hexagon.png'), linear-gradient(135deg, #2c3e50, #3498db);
+            background-size: cover, cover;
             color: #fff;
             text-align: center;
             overflow: hidden;
@@ -17,6 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         .background-animation {
             position: absolute;
@@ -24,9 +26,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0.4));
+            background: rgba(0, 0, 0, 0.2);
             z-index: -1;
-            animation: moveBackground 10s linear infinite;
+            animation: moveBackground 20s linear infinite;
         }
         @keyframes moveBackground {
             0% { background-position: 0 0; }
@@ -49,6 +51,7 @@
         }
         .content {
             padding: 20px;
+            position: relative;
         }
         .content p {
             font-size: 22px;
@@ -73,9 +76,26 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         .button:hover {
             background-color: #0056b3;
+        }
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%) rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .button:hover::before {
+            opacity: 1;
         }
         .animate {
             font-size: 24px;
