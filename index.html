@@ -17,65 +17,8 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+            background: url('https://cdn.pixabay.com/photo/2015/09/18/19/03/stars-941271_960_720.jpg') no-repeat center center fixed;
             background-size: cover;
-        }
-        .background-animation {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-        .background-animation::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
-            z-index: 1;
-        }
-        .background-animation::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            z-index: 2;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .background-animation::after {
-            background: transparent;
-            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 
-                        0 0 4px rgba(255, 255, 255, 0.5), 
-                        0 0 6px rgba(255, 255, 255, 0.5), 
-                        0 0 8px rgba(255, 255, 255, 0.5), 
-                        0 0 10px rgba(255, 255, 255, 0.5);
-            animation: stars 100s linear infinite;
-        }
-        @keyframes stars {
-            0% { box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 
-                              0 0 4px rgba(255, 255, 255, 0.5), 
-                              0 0 6px rgba(255, 255, 255, 0.5), 
-                              0 0 8px rgba(255, 255, 255, 0.5), 
-                              0 0 10px rgba(255, 255, 255, 0.5); }
-            50% { box-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 
-                              0 0 8px rgba(255, 255, 255, 0.6), 
-                              0 0 12px rgba(255, 255, 255, 0.6), 
-                              0 0 16px rgba(255, 255, 255, 0.6), 
-                              0 0 20px rgba(255, 255, 255, 0.6); }
-            100% { box-shadow: 0 0 2px rgba(255, 255, 255, 0.5), 
-                               0 0 4px rgba(255, 255, 255, 0.5), 
-                               0 0 6px rgba(255, 255, 255, 0.5), 
-                               0 0 8px rgba(255, 255, 255, 0.5), 
-                               0 0 10px rgba(255, 255, 255, 0.5); }
         }
         .header {
             padding: 40px 20px;
@@ -97,6 +40,8 @@
         .content {
             padding: 20px;
             position: relative;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
         }
         .content p {
             font-size: 22px;
@@ -171,7 +116,6 @@
     </style>
 </head>
 <body>
-    <div class="background-animation"></div>
     <div class="header">
         <h1>江上青工作室</h1>
         <p>专注于互联网创业和副业发展</p>
